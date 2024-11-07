@@ -1,4 +1,9 @@
+# ERC1820 Implementation used for learning purposes.
+
+[Original](https://github.com/0xjac/ERC1820)
+
 # ERC1820 Pseudo-introspection Registry Contract
+
 [![Build Status](https://img.shields.io/circleci/project/github/0xjac/ERC1820/master.svg?style=flat-square&maxAge=3600)](https://circleci.com/gh/0xjac/ERC1820)
 [![License](https://img.shields.io/npm/l/erc1820.svg?style=flat-square&maxAge=3600)](https://github.com/0xjac/ERC1820/blob/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/erc1820.svg?style=flat-square&maxAge=3600)](https://www.npmjs.com/package/erc1820)
@@ -6,7 +11,7 @@
 [![Solidity version](https://img.shields.io/badge/Solidity-v0.5.3-ff69b4.svg?style=flat-square&maxAge=3600)](https://solidity.readthedocs.io/en/v0.5.3/installing-solidity.html)
 [![EIP](https://img.shields.io/badge/EIP-1820-lightgrey.svg?style=flat-square&maxAge=3600)](https://eips.ethereum.org/EIPS/eip-1820)
 
-*Universal registry smart contract where any address (contract or regular account) can register which interface it supports and which smart contract is responsible for its implementation.*
+_Universal registry smart contract where any address (contract or regular account) can register which interface it supports and which smart contract is responsible for its implementation._
 
 > :information_source: **[ERC1820] has superseded [ERC820].** :information_source:  
 > [ERC1820] fixes the incompatibility in the [ERC165] logic which was introduced by the Solidty 0.5 update.  
@@ -16,6 +21,7 @@
 > :warning: [ERC1820] MUST be used in lieu of [ERC820]. :warning:
 
 ## Proposal
+
 The official proposal can be found at: [eips.ethereum.org/EIPS/eip-1820][ERC1820].
 
 ## ERC1820 Registry
@@ -36,7 +42,7 @@ The [ERC1820 implementer interface] is the interface any contract MUST implement
 
 The registry can be compiled from the source code using:
 
-``` shell
+```shell
 npm run build
 ```
 
@@ -46,7 +52,7 @@ This will write the json artifacts for the registry in the `artifacts` folder an
 
 The address of the account creating the registry, the address of the registry and the raw signed transaction can be generated with:
 
-``` shell
+```shell
 $ npm run info
 > node js/info.js
 
@@ -61,7 +67,7 @@ Those values can be compared with the values in the [ERC1820 standard][ERC1820].
 
 The metadata---for the registry only---can be extrated using:
 
-``` shell
+```shell
 node scripts/extract_metadata.js
 ```
 
@@ -72,15 +78,15 @@ This metadata can also be compared with the formated version in the [ERC1820 sta
 The vanity address of the registry---starting with `0x1820`---has been generated using the [`scripts/vanitygen.sh`] and [`scripts/vanitygen-info.js`] scripts.
 
 ## Authors
- - Jordi Baylina [@jbaylina][jbaylina]
- - Jacques Dafflon [@0xjac][0xjac]
+
+- Jordi Baylina [@jbaylina][jbaylina]
+- Jacques Dafflon [@0xjac][0xjac]
 
 ## License
 
-> The [ERC1820 registry] is part of the  [ERC1820 standard][ERC1820] and is therefore in the public domain via [CC0].
+> The [ERC1820 registry] is part of the [ERC1820 standard][ERC1820] and is therefore in the public domain via [CC0].
 
 The authors waive all copyright and related or neighboring rights for the rest of this repository's content via [CC0]. A copy of the [CC0] waiver is included in the [LICENSE] file.
-
 
 [ERC165]: https://eips.ethereum.org/EIPS/eip-165
 [ERC820]: https://eips.ethereum.org/EIPS/eip-820
@@ -97,4 +103,3 @@ The authors waive all copyright and related or neighboring rights for the rest o
 [erc1820-annoucement]: https://github.com/ethereum/EIPs/issues/820#issuecomment-464109166
 [erc820-bug]: https://github.com/ethereum/EIPs/issues/820#issuecomment-452465748
 [erc820-fix]: https://github.com/ethereum/EIPs/issues/820#issuecomment-454021564
-
